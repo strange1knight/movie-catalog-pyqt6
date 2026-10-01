@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+.idea/
+.vscode/
+build/
+*.spec
+*.sqlite3
+*.db
+posters/
+movie_catalog/docs/
+movie_catalog/tests/
+tmp/
+.env
+.env.*

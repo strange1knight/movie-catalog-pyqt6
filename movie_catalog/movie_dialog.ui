@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MovieDialog</class>
+ <widget class="QDialog" name="MovieDialog">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>650</width><height>680</height></rect></property>
+  <property name="windowTitle"><string>Фильм</string></property>
+  <layout class="QVBoxLayout" name="rootLayout">
+   <property name="leftMargin"><number>24</number></property>
+   <property name="topMargin"><number>24</number></property>
+   <property name="rightMargin"><number>24</number></property>
+   <property name="bottomMargin"><number>24</number></property>
+   <property name="spacing"><number>10</number></property>
+   <item><widget class="QLabel" name="dialogHeading"><property name="text"><string>Добавить фильм</string></property></widget></item>
+   <item><layout class="QFormLayout" name="formLayout">
+     <property name="labelAlignment"><set>Qt::AlignRight|Qt::AlignVCenter</set></property>
+     <item row="0" column="0"><widget class="QLabel" name="titleLabel"><property name="text"><string>Название *</string></property></widget></item>
+     <item row="0" column="1"><widget class="QLineEdit" name="titleEdit"><property name="placeholderText"><string>Например, Интерстеллар</string></property></widget></item>
+     <item row="1" column="0"><widget class="QLabel" name="yearLabel"><property name="text"><string>Год</string></property></widget></item>
+     <item row="1" column="1"><widget class="QSpinBox" name="yearSpin"><property name="minimum"><number>1888</number></property><property name="maximum"><number>2100</number></property></widget></item>
+     <item row="2" column="0"><widget class="QLabel" name="genreLabel"><property name="text"><string>Жанры *</string></property></widget></item>
+     <item row="2" column="1"><layout class="QVBoxLayout" name="genreLayout"><item><widget class="QListWidget" name="genreList"><property name="minimumSize"><size><width>0</width><height>130</height></size></property><property name="maximumSize"><size><width>16777215</width><height>145</height></size></property></widget></item><item><widget class="QLabel" name="selectedGenresLabel"><property name="wordWrap"><bool>true</bool></property><property name="text"><string>Отметьте один или несколько жанров</string></property></widget></item></layout></item>
+     <item row="3" column="0"><widget class="QLabel" name="statusLabel"><property name="text"><string>Статус</string></property></widget></item>
+     <item row="3" column="1"><widget class="QComboBox" name="statusCombo"><item><property name="text"><string>В планах</string></property></item><item><property name="text"><string>Просмотрено</string></property></item></widget></item>
+     <item row="4" column="0"><widget class="QLabel" name="ratingLabel"><property name="text"><string>Оценка</string></property></widget></item>
+     <item row="4" column="1"><layout class="QHBoxLayout" name="ratingLayout">
+       <item><widget class="QSpinBox" name="ratingSpin"><property name="minimumSize"><size><width>105</width><height>0</height></size></property><property name="maximumSize"><size><width>105</width><height>16777215</height></size></property><property name="minimum"><number>1</number></property><property name="maximum"><number>10</number></property><property name="suffix"><string> / 10</string></property></widget></item>
+       <item><widget class="QPushButton" name="ratingUpButton"><property name="maximumSize"><size><width>42</width><height>16777215</height></size></property><property name="text"><string>▲</string></property><property name="toolTip"><string>Увеличить оценку</string></property></widget></item>
+       <item><widget class="QPushButton" name="ratingDownButton"><property name="maximumSize"><size><width>42</width><height>16777215</height></size></property><property name="text"><string>▼</string></property><property name="toolTip"><string>Уменьшить оценку</string></property></widget></item>
+       <item><spacer name="ratingSpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
+      </layout></item>
+     <item row="5" column="0"><widget class="QLabel" name="notesLabel"><property name="text"><string>Заметки</string></property></widget></item>
+     <item row="5" column="1"><widget class="QPlainTextEdit" name="notesEdit"><property name="minimumSize"><size><width>0</width><height>70</height></size></property><property name="maximumSize"><size><width>16777215</width><height>95</height></size></property><property name="placeholderText"><string>Что понравилось, почему хотите посмотреть…</string></property></widget></item>
+    </layout></item>
+   <item><layout class="QHBoxLayout" name="posterLayout">
+     <item><widget class="QLabel" name="posterPreview"><property name="minimumSize"><size><width>90</width><height>100</height></size></property><property name="maximumSize"><size><width>90</width><height>100</height></size></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="text"><string>Нет постера</string></property></widget></item>
+     <item><layout class="QVBoxLayout" name="posterButtonsLayout">
+       <item><widget class="QPushButton" name="choosePosterButton"><property name="text"><string>Выбрать постер…</string></property></widget></item>
+       <item><widget class="QPushButton" name="clearPosterButton"><property name="text"><string>Убрать постер</string></property></widget></item>
+       <item><spacer name="posterSpacer"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>40</height></size></property></spacer></item>
+      </layout></item>
+    </layout></item>
+   <item><widget class="QDialogButtonBox" name="buttonBox"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="standardButtons"><set>QDialogButtonBox::Cancel|QDialogButtonBox::Save</set></property></widget></item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
